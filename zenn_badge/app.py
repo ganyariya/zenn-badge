@@ -18,7 +18,7 @@ def make_badge(username: str, left_text: str, right_text: str) -> str:
 
 @app.get("/")
 def main() -> str:
-    return "Zenn Budges"
+    return "Zenn Badges"
 
 
 @app.get("/{username}/liked", response_class=HTMLResponse)

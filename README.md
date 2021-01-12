@@ -1,9 +1,9 @@
 
-zenn-budge
+zenn-badge
 
 ====
 
-zenn-budge can make
+zenn-badge can make
 
 ## Description
 
