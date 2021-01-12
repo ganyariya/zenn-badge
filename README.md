@@ -3,26 +3,40 @@ zenn-badge
 
 ====
 
-zenn-badge can make
+Zenn-badge can make badges of [Zenn](https://zenn.dev/).
 
-## Description
+[swagger-ui is here.](https://zenn-badge.ganariya.vercel.app/docs)
 
 ## Demo
 
-## VS.
-
-## Requirement
+![ganariya-liked](https://zenn-badge.ganariya.vercel.app/ganariya/liked)
+![ganariya-followers](https://zenn-badge.ganariya.vercel.app/ganariya/followers)
+![ganariya-articles](https://zenn-badge.ganariya.vercel.app/ganariya/articles)
 
 ## Usage
 
+```markdown
+![your-text](https://zenn-badge.ganariya.vercel.app/{username}/liked)
+![your-text](https://zenn-badge.ganariya.vercel.app/{username}/followers)
+![your-text](https://zenn-badge.ganariya.vercel.app/{username}/articles)
+```
+
 ## Install
 
-## Contribution
+```bash
+git clone https://github.com/Ganariya/zenn-badge.git
+cd zenn-badge
+pip install -r requirements.txt
+```
 
 ## Licence
 
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+MIT
 
 ## Author
 
-[tcnksm](https://github.com/tcnksm)
+[ganariya](https://github.com/Ganariya/zenn-badge)
+
+## Thanks
+
+[itsdeka](https://github.com/itsdeka)/[vercelfastapi](https://github.com/itsdeka/vercelfastapi)
