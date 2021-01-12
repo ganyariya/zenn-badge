@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .test import test
+from .zenn import scrape_user
 
 app = FastAPI()
 
@@ -13,4 +13,5 @@ def main():
 
 @app.get("/test")
 def test_get():
-    return test()
+    scrape_user("ganariya")
+    return 0
