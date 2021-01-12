@@ -1,10 +1,9 @@
 
 zenn-badge
 
-====
+---
 
-Zenn-badge can make badges of [Zenn](https://zenn.dev/).
-
+Zenn-badge can make badges of [Zenn](https://zenn.dev/).  
 [swagger-ui is here.](https://zenn-badge.ganariya.vercel.app/docs)
 
 ## Demo

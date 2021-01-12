@@ -22,21 +22,21 @@ def main() -> str:
 
 
 @app.get("/{username}/liked", response_class=HTMLResponse)
-def get_liked(username: str) -> str:
+def get_liked(username: str):
     user: User = scrape_user(username)
     badge = make_badge(username, 'Zenn liked', str(user.total_liked_count))
-    return badge
+    return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
 
 
 @app.get("/{username}/articles", response_class=HTMLResponse)
-def get_liked(username: str) -> str:
+def get_liked(username: str):
     user: User = scrape_user(username)
     badge = make_badge(username, 'Zenn articles', str(user.articles_count))
-    return badge
+    return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
 
 
 @app.get("/{username}/followers", response_class=HTMLResponse)
-def get_liked(username: str) -> str:
+def get_liked(username: str):
     user: User = scrape_user(username)
     badge = make_badge(username, 'Zenn followers', str(user.follower_count))
-    return badge
+    return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
