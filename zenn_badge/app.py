@@ -29,14 +29,14 @@ def get_liked(username: str):
 
 
 @app.get("/{username}/articles", response_class=HTMLResponse)
-def get_liked(username: str):
+def get_articles(username: str):
     user: User = scrape_user(username)
     badge = make_badge(username, 'Zenn articles', str(user.articles_count))
     return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
 
 
 @app.get("/{username}/followers", response_class=HTMLResponse)
-def get_liked(username: str):
+def get_followers(username: str):
     user: User = scrape_user(username)
     badge = make_badge(username, 'Zenn followers', str(user.follower_count))
     return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
