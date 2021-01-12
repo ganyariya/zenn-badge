@@ -1,11 +1,21 @@
 {
-    "version": 2,
-    "public": false,
-    "builds": [{ "src": "app.py", "use": "@now/python" }],
-    "routes": [
-        { "src": "/", "dest": "app.py" },
-        { "src": "/example/(.*)", "dest": "app.py" },
-        { "src": "/docs", "dest": "app.py" },
-        { "src": "/openapi.json", "dest": "app.py" }
-    ]
+  "version": 2,
+  "public": false,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@now/python"
+    }
+  ],
+  "routes": [
+    {
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      },
+      "src": "/.*",
+      "dest": "app.py"
+    }
+  ]
 }
