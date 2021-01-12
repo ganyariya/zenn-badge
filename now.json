@@ -3,7 +3,7 @@
   "public": false,
   "builds": [
     {
-      "src": "zenn_budge/app.py",
+      "src": "app.py",
       "use": "@now/python"
     }
   ],
@@ -15,7 +15,7 @@
         "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
       },
       "src": "/.*",
-      "dest": "zenn_budge/app.py"
+      "dest": "app.py"
     }
   ]
 }
