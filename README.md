@@ -28,6 +28,14 @@ cd zenn-badge
 pip install -r requirements.txt
 ```
 
+# Contribution
+
+Please contribute anything!
+
+- Add Features
+- Refactoring
+- Issue
+
 ## Licence
 
 MIT
