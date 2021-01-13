@@ -35,8 +35,30 @@ def get_articles(username: str):
     return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
 
 
+@app.get("/{username}/books", response_class=HTMLResponse)
+def get_books(username: str):
+    user: User = scrape_user(username)
+    badge = make_badge(username, 'Zenn books', str(user.books_count))
+    return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
+
+
+@app.get("/{username}/scraps", response_class=HTMLResponse)
+def get_scraps(username: str):
+    user: User = scrape_user(username)
+    badge = make_badge(username, 'Zenn scraps', str(user.scraps_count))
+    return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
+
+
 @app.get("/{username}/followers", response_class=HTMLResponse)
 def get_followers(username: str):
     user: User = scrape_user(username)
     badge = make_badge(username, 'Zenn followers', str(user.follower_count))
     return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
+
+
+@app.get("/{username}/followings", response_class=HTMLResponse)
+def get_followings(username: str):
+    user: User = scrape_user(username)
+    badge = make_badge(username, 'Zenn followings', str(user.following_count))
+    return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
+
