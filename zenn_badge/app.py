@@ -2,18 +2,13 @@ import pybadges
 
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 
 from .zenn import scrape_user
 from .user import User
-from .logo import LOGO
+from .badge import make_badge
 
 app = FastAPI()
-BASE_COLOR: str = '#3FA8FF'
-
-
-def make_badge(username: str, left_text: str, right_text: str) -> str:
-    url = f'https://zenn.dev/{username}'
-    return pybadges.badge(left_text=left_text, right_text=right_text, right_color=BASE_COLOR, embed_logo=True, logo=LOGO, left_link=url, right_link=url)
 
 
 @app.get("/")
@@ -61,4 +56,3 @@ def get_followings(username: str):
     user: User = scrape_user(username)
     badge = make_badge(username, 'Zenn followings', str(user.following_count))
     return HTMLResponse(content=badge, status_code=200, media_type='image/svg+xml')
-

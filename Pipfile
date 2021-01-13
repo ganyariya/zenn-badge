@@ -10,6 +10,7 @@ pybadges = "*"
 pydantic = "*"
 requests = "*"
 uvicorn = "*"
+jinja2 = "*"
 
 [dev-packages]
 
