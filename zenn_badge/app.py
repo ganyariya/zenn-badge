@@ -19,9 +19,9 @@ def main() -> str:
     return "Zenn Badges"
 
 
-@app.get("/items/{id}", response_class=HTMLResponse)
-def read_item(request: Request, id: str):
-    return templates.TemplateResponse("item.html", {"request": request, "id": id})
+# @app.get("/items/{id}", response_class=HTMLResponse)
+# def read_item(request: Request, id: str):
+#     return templates.TemplateResponse('index.html', {"request": request, "id": id})
 
 
 @app.get("/{username}/liked", response_class=HTMLResponse)
