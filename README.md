@@ -41,6 +41,8 @@ Please contribute anything!
 - Add Features
 - Refactoring
 - Issue
+- Index Page More Beautiful
+    - I am not goot at html, css, and design...
 
 ## Licence
 
