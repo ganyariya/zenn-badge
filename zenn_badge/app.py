@@ -1,5 +1,4 @@
-import pybadges
-
+from typing import Optional
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -14,9 +13,14 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
+# @app.get("/")
+# def main() -> str:
+#     return "Zenn Badges"
+
+
 @app.get("/")
-def main() -> str:
-    return "Zenn Badges"
+def index(request: Request, username: Optional[str] = None):
+    return templates.TemplateResponse('index.html', {'request': request, "username": username})
 
 
 # @app.get("/items/{id}", response_class=HTMLResponse)
