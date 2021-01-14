@@ -1,20 +1,95 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Zenn-Badge</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 <body>
-<div id="root"></div>
-Zenn-Badge
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/">
+                Zenn-Badge
+            </a>
+            <a class="navbar-item" href="/docs">
+                Docs
+            </a>
+        </div>
+
+        <div class="navbar-end">
+            <a class="navbar-item" href="https://github.com/Ganariya/zenn-badge">
+                GitHub
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="container mt-6">
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Zenn-Badge
+                </h1>
+                <h2 class="subtitle">
+                    Can make badges of Zenn.
+                </h2>
+            </div>
+        </div>
+    </section>
+    <div class="columns mt-2 is-vcentered">
+        <div class="column is-four-fifths">
+            <div class="container is-centered">
+                <label class="label"> Your Account </label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Your Zenn Account Name" id="account-input">
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="container has-text-centered">
+                <button class="button is-info" id="account-button">Make</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% if username != None %}
+            <div class="control">
+            <textarea class="textarea has-fixed-size" rows="6">
+![Zenn-{{ username }}-liked](https://zenn-badge.ganariya.vercel.app/{{ username }}/liked)
+![Zenn-{{ username }}-follwings](https://zenn-badge.ganariya.vercel.app/{{ username }}/followings)
+![Zenn-{{ username }}-followers](https://zenn-badge.ganariya.vercel.app/{{ username }}/followers)
+![Zenn-{{ username }}-articles](https://zenn-badge.ganariya.vercel.app/{{ username }}/articles)
+![Zenn-{{ username }}-scraps](https://zenn-badge.ganariya.vercel.app/{{ username }}/scraps)
+![Zenn-{{ username }}-books](https://zenn-badge.ganariya.vercel.app/{{ username }}/books)
+            </textarea>
+            </div>
+        {% endif %}
+    </div>
+    {% if username != None %}
+        <div class="container mt-6">
+            <img alt="liked" src="https://zenn-badge.ganariya.vercel.app/{{ username }}/liked"/>
+            <img alt="followings" src="https://zenn-badge.ganariya.vercel.app/{{ username }}/followings"/>
+            <img alt="followers" src="https://zenn-badge.ganariya.vercel.app/{{ username }}/followers"/>
+            <img alt="articles" src="https://zenn-badge.ganariya.vercel.app/{{ username }}/articles"/>
+            <img alt="scraps" src="https://zenn-badge.ganariya.vercel.app/{{ username }}/scraps"/>
+            <img alt="books" src="https://zenn-badge.ganariya.vercel.app/{{ username }}/books"/>
+        </div>
+    {% endif %}
+</div>
 </body>
-<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-<script type="text/babel">
-    ReactDOM.render(
-        <h1>Hello, world</h1>,
-        document.getElementById('root')
-    );
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('account-button')
+        const input = document.getElementById('account-input')
+        button.addEventListener('click', () => {
+            const username = input.value;
+            if (username === "") return;
+            window.location.href = `/?username=${username}`
+        })
+    });
 </script>
 </html>
