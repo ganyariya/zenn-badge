@@ -8,22 +8,22 @@ Zenn-badge can make badges of [Zenn](https://zenn.dev/).
 
 ## Demo
 
-![ganariya-liked](https://zenn-badge.ganariya.vercel.app/ganariya/liked)
-![ganariya-followers](https://zenn-badge.ganariya.vercel.app/ganariya/followers)
-![ganariya-followings](https://zenn-badge.ganariya.vercel.app/ganariya/followings)
-![ganariya-articles](https://zenn-badge.ganariya.vercel.app/ganariya/articles)
-![ganariya-books](https://zenn-badge.ganariya.vercel.app/ganariya/books)
-![ganariya-scraps](https://zenn-badge.ganariya.vercel.app/ganariya/scraps)
+[![ganariya-liked](https://zenn-badge.ganariya.vercel.app/ganariya/liked)](https://zenn.dev/ganariya)
+[![ganariya-followers](https://zenn-badge.ganariya.vercel.app/ganariya/followers)](https://zenn.dev/ganariya)
+[![ganariya-followings](https://zenn-badge.ganariya.vercel.app/ganariya/followings)](https://zenn.dev/ganariya)
+[![ganariya-articles](https://zenn-badge.ganariya.vercel.app/ganariya/articles)](https://zenn.dev/ganariya)
+[![ganariya-books](https://zenn-badge.ganariya.vercel.app/ganariya/books)](https://zenn.dev/ganariya)
+[![ganariya-scraps](https://zenn-badge.ganariya.vercel.app/ganariya/scraps)](https://zenn.dev/ganariya)
 
 ## Usage
 
 ```markdown
-![your-text](https://zenn-badge.ganariya.vercel.app/{username}/liked)
-![your-text](https://zenn-badge.ganariya.vercel.app/{username}/followers)
-![your-text](https://zenn-badge.ganariya.vercel.app/{username}/follwings)
-![your-text](https://zenn-badge.ganariya.vercel.app/{username}/articles)
-![your-text](https://zenn-badge.ganariya.vercel.app/{username}/books)
-![your-text](https://zenn-badge.ganariya.vercel.app/{username}/scraps)
+[![your-text](https://zenn-badge.ganariya.vercel.app/{username}/liked)](https://zenn.dev/{username})
+[![your-text](https://zenn-badge.ganariya.vercel.app/{username}/followers)](https://zenn.dev/{username})
+[![your-text](https://zenn-badge.ganariya.vercel.app/{username}/follwings)](https://zenn.dev/{username})
+[![your-text](https://zenn-badge.ganariya.vercel.app/{username}/articles)](https://zenn.dev/{username})
+[![your-text](https://zenn-badge.ganariya.vercel.app/{username}/books)](https://zenn.dev/{username})
+[![your-text](https://zenn-badge.ganariya.vercel.app/{username}/scraps)](https://zenn.dev/{username})
 ```
 
 ## Install
