@@ -1,9 +1,9 @@
 
-zenn-badge
+[zenn-badge](https://zenn-badge.ganariya.vercel.app/)
 
 ---
 
-Zenn-badge can make badges of [Zenn](https://zenn.dev/).  
+[Zenn-badge](https://zenn-badge.ganariya.vercel.app/) can make badges of [Zenn](https://zenn.dev/).  
 [swagger-ui(Documentation) is here.](https://zenn-badge.ganariya.vercel.app/docs)
 
 ## Demo
