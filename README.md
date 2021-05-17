@@ -3,6 +3,14 @@
 
 ---
 
+## Note
+
+2021/05/17 現在 Zenn の API の仕様がおそらく変わったため，こちらのバッジを使うことができません．
+他のアプリの制作で ganariya が忙しく，APIの仕様変更に合わせた対応開発が難しいです．
+より使いやすい [nikaeraさんによるZennのバッジ]を利用いただければと思います．
+
+---
+
 [Zenn-badge](https://zenn-badge.ganariya.vercel.app/) can make badges of [Zenn](https://zenn.dev/).  
 [swagger-ui(Documentation) is here.](https://zenn-badge.ganariya.vercel.app/docs)
 
